@@ -1,4 +1,4 @@
-from code.index import findMin, findMax, sumOfElements, multOfElements
+from src.index import findMin, findMax, sumOfElements, multOfElements
 
 import os
 import unittest
