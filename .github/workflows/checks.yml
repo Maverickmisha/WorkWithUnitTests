@@ -1,21 +1,22 @@
 name: Code checks
-
 on:
     push:
-        branches: [ master ]
-
+        branches: master
 jobs:
   run_tests:
-        runs-on: ubuntu-latest
-        steps:
-        - uses: actions/checkout@master
-        - name: Install python
-          uses: actions/setup-python@v2
-          with:
-            python-version: 3.9
-        - name: Install requirements
+    runs-on: [ubuntu-latest]
+    steps:
+      # Чекаутим код
+      - uses: actions/checkout@master
+      # Устанавливаем python нужной версии
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '3.9'
+          architecture: 'x64'
+      - name: Install requirements
+        # Устанавливаем зависимости
         run: pip install -r requirements.txt
-        - name: Run tests
+      - name: Run tests
         run: coverage run unit_tests.py
-        - name: Tests report
+      - name: Tests report
         run: coverage report
