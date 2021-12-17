@@ -10,3 +10,5 @@
 - проверяющие корректность работы функций сложения и умножения;
 - проверяющие скорость работы программы при увеличении размера входного файла;
 - проверяющие рост объема затрачиваемой оперативной памяти при увеличении размера входного файла.
+
+![Build Status](https://github.com/xdan/jodit/workflows/Run%20tests/badge.svg)](https://github.com/Maverickmisha/WorkWithUnitTests/actions/checks.yml)
